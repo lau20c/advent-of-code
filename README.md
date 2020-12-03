@@ -1,7 +1,7 @@
 # Advent of Code 🎄
 These are my <a href="https://adventofcode.com/" rel="nofollow">Advent of Code</a> solutions. Most recent solutions use Python 3.9. I aim to have fun and expand my cursory knowledge of Python.
 
-##2020
+## 2020
 <table>
 <thead>
 <tr>
