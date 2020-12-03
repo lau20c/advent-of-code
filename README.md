@@ -12,12 +12,12 @@ These are my <a href="https://adventofcode.com/" rel="nofollow">Advent of Code</
 </thead>
 <tbody>
 <tr>
-<td><a href="lau20c/advent-of-code/tree/main/2020/1">Day 1</a></td>
+<td><a href="2020/1">Day 1</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="lau20c/advent-of-code/tree/main/2020/2">Day 2</a></td>
+<td><a href="2020/2">Day 2</a></td>
 <td></td>
 <td></td>
 </tr>
