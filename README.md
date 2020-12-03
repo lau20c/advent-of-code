@@ -1,7 +1,9 @@
 # Advent of Code 🎄
+
 These are my <a href="https://adventofcode.com/" rel="nofollow">Advent of Code</a> solutions. Most recent solutions use Python 3.9. I aim to have fun and expand my cursory knowledge of Python.
 
 ## 2020
+
 <table>
 <thead>
 <tr>
@@ -13,13 +15,13 @@ These are my <a href="https://adventofcode.com/" rel="nofollow">Advent of Code</
 <tbody>
 <tr>
 <td><a href="2020/1">Day 1</a></td>
-<td></td>
-<td></td>
+<td>x</td>
+<td>x</td>
 </tr>
 <tr>
 <td><a href="2020/2">Day 2</a></td>
-<td></td>
-<td></td>
+<td>x</td>
+<td>x</td>
 </tr>
 <tr>
 <td>Day 3</td>

@@ -5,43 +5,35 @@ with open(os.path.join(os.path.dirname(__file__),"input.txt"), "r") as f:
 data.sort(reverse=True)
 
 def partOne(numbers):
-    outer = 0
-    while (outer < len(numbers)):
-        inner = len(numbers)-1
-        diff = 2020 - numbers[outer]
-        while (inner >= 0):
-            if (numbers[inner] == diff):
-                break
-            else:
-                inner-=1
-        if (numbers[outer]+numbers[inner] == 2020):
-            print("Numbers: %i, %i" % (numbers[outer],numbers[inner]))
-            print("Sum:", numbers[outer]+numbers[inner])
-            print("Product:", numbers[outer]*numbers[inner])
+    i = 0
+    while (i < len(numbers)):
+        diff = 2020 - numbers[i]
+        if diff in numbers:
+            print("Numbers: %i, %i" % (numbers[i], diff))
+            print("Sum:", numbers[i]+diff)
+            print("Product:", numbers[i]*diff)
             return
         else:
-            outer+=1
+            i+=1
 
 def partTwo(numbers):
-    index1 = 0
-    while (index1 < len(numbers)):
-        diff = 2020 - numbers[index1]
-        index2 = len(numbers)-1
-        while (index2 > 0):
-            if (diff-numbers[index2-1] < 0):
+    i1 = 0
+    while (i1 < len(numbers)):
+        diff = 2020 - numbers[i1]
+        i2 = len(numbers)-1
+        while (i2 > 0):
+            diff2 = diff-numbers[i2]
+            if (diff2 < 0):
                 break
             else:
-                index3 = index2-1
-                while(index3 > 0):
-                    if (diff-numbers[index2] == numbers[index3]):
-                        print("Numbers: %i, %i, %i" % (numbers[index1], numbers[index2], numbers[index3]))
-                        print("Sum:", numbers[index1]+numbers[index2]+numbers[index3])
-                        print("Product:", numbers[index1]*numbers[index2]*numbers[index3])
-                        return
-                    else:
-                        index3-=1
-                index2-=1
-        index1+=1
+                if diff2 in numbers:
+                    print("Numbers: %i, %i, %i" % (numbers[i1], numbers[i2], diff2))
+                    print("Sum:", numbers[i1]+numbers[i2]+diff2)
+                    print("Product:", numbers[i1]*numbers[i2]*diff2)
+                    return
+                else:
+                    i2-=1
+        i1+=1
 
 partOne(data)
 partTwo(data)
