@@ -13,9 +13,9 @@ def treeCount(forest, xStep, yStep):
                 index = index - len(line)
             if line[index] == '#': # check location for tree
                 trees +=1
-            index += xStep # horizonetal movement
+            index += xStep # horizontal movement
             rows += 1
-
+        
         if (rows == len(forest)): # exit if we're at the bottom
             return trees
 

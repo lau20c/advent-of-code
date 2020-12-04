@@ -1,6 +1,14 @@
 # Advent of Code 🎄
 
-These are my <a href="https://adventofcode.com/" rel="nofollow">Advent of Code</a> solutions. Most recent solutions use Python 3.9. I aim to have fun and expand my cursory knowledge of Python.
+These are my <a href="https://adventofcode.com/">Advent of Code</a> solutions. Most recent solutions use Python 3.9. I aim to have fun and expand my cursory knowledge of Python.
+
+The folder for each day contains:
+
+<ul>
+    <li>Task description</li>
+    <li>Input for the task</li>
+    <li>Code used to solve the task</li>
+</ul>
 
 ## 2020
 
