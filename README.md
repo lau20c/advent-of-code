@@ -24,9 +24,9 @@ These are my <a href="https://adventofcode.com/" rel="nofollow">Advent of Code</
 <td>x</td>
 </tr>
 <tr>
-<td>Day 3</td>
-<td></td>
-<td></td>
+<td><a href="2020/3">Day 3</a></td>
+<td>x</td>
+<td>x</td>
 </tr>
 <tr>
 <td>Day 4</td>
