@@ -43,7 +43,7 @@ The folder for each day contains:
 </tr>
 <tr>
 <td><a href="2020/5">Day 5</a></td>
-<td></td>
+<td>x</td>
 <td></td>
 </tr>
 <tr>
