@@ -8,32 +8,57 @@ with open(os.path.join(os.path.dirname(__file__), "input.txt"), "r") as f:
 def partOne(passes):
     seats = []
     for ticket in passes:
-        i = 0
-        row = [0, 127]
-        col = [0, 7]
+        i = row = col = 0
+        dist = [0, 127]
         while i < len(ticket):
-            if i < 7:
-                if ticket[i] == 'B':
-                    row = [math.ceil((row[0]+row[-1])/2), row[-1]]
-                else:
-                    row = [row[0], math.floor((row[0]+row[-1])/2)]
+            # calculate row first
+            if ticket[i] == 'B' or ticket[i] == 'R':
+                dist = [math.ceil((dist[0]+dist[-1])/2), dist[-1]]
             else:
-                if ticket[i] == 'R':
-                    col = [math.ceil((col[0]+col[-1])/2), col[-1]]
-                else:
-                    col = [col[0], math.floor((col[0]+col[-1])/2)]
+                dist = [dist[0], math.floor((dist[0]+dist[-1])/2)]
             i += 1
-        seats.append((row[0]*8)+col[0])
+            # reset distance to calculate column
+            if i == 7:
+                row = dist[0]
+                dist = [0, 7]
+        col = dist[0]
+        # calculate and append seatID
+        seats.append((row*8)+col)
     return(max(seats))
 
-# def process(input):
-#     output = []
-#     for line in input:
-#         output.append(list(line))
-#     return output
+
+def partTwo(passes):
+    occupied = []
+    for ticket in passes:
+        i = row = col = 0
+        dist = [0, 127]
+        while i < len(ticket):
+            # calculate row first
+            if ticket[i] == 'B' or ticket[i] == 'R':
+                dist = [math.ceil((dist[0]+dist[-1])/2), dist[-1]]
+            else:
+                dist = [dist[0], math.floor((dist[0]+dist[-1])/2)]
+            i += 1
+            # reset distance to calculate column
+            if i == 7:
+                row = dist[0]
+                dist = [0, 7]
+        col = dist[0]
+        # calculate and append seatID
+        occupied.append((row*8)+col)
+    occupied.sort()
+    # remove very front and back seats
+    for seat in occupied:
+        if seat <= (0*8)+7 or seat >= (127*8)+0:
+            occupied.remove(seat)
+    # find free seat
+    i = 1
+    while i < len(occupied) - 1:
+        if not (occupied[i-1] + 1 == occupied[i]
+                and occupied[i] == occupied[i+1]-1):
+            return(occupied[i]+1)
+        i += 1
 
 
-examples = ['FBFBBFFRLR', 'BFFFBBFRRR', 'FFFBBBFRRR', 'BBFFBBFRLL']
-
-# print(process(examples))
 print(partOne(data))
+print(partTwo(data))
