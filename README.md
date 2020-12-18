@@ -47,9 +47,9 @@ The folder for each day contains:
 <td>x</td>
 </tr>
 <tr>
-<td>Day 6</td>
-<td></td>
-<td></td>
+<td><a href="2020/6">Day 6</a></td>
+<td>x</td>
+<td>x</td>
 </tr>
 <tr>
 <td>Day 7</td>
