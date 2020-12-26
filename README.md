@@ -53,7 +53,7 @@ The folder for each day contains:
 </tr>
 <tr>
 <td>Day 7</td>
-<td></td>
+<td>x</td>
 <td></td>
 </tr>
 <tr>
